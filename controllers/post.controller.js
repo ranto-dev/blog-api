@@ -15,9 +15,8 @@ module.exports.setPosts = async (req, res) => {
         message: req.body.message,
         author: req.body.author,
     })
-
     res.status(200).json(post)
-} 
+}
 
 module.exports.editPosts = async (req, res) => {
     const post = await postModels.findById(req.params.id)
